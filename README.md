@@ -2,20 +2,57 @@
 
 Продуктовый помощник. Смотрите и создавайте рецепты, подписывайтесь на авторов, добавляйте рецепты в избранное и скачивайте список покупок!
 
-## Варианты запуска проекта
-
-### Запуск проекта в dev-режиме без Docker
+## Технологии
+Python Django Django REST Framework PostgreSQL Nginx gunicorn docker GitHub%20Actions Yandex.Cloud
 
 #### Клонирование проекта
 
-Сперва клонируйте репозиторий на локальную машину и создайте venv
+Сперва клонируйте репозиторий на локальную машину
 
 ```
 git clone git@github.com:Stepan3006/foodgram-project-react.git
-cd foodgram-project-react
-python -m venv venv
-source venv/bin/activate
-cd backend/foodgram
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+cd foodgram-project-react/infra
 ```
+
+#### Создание .env-файла
+
+На production обязательно заменить значение SECRET_KEY
+
+С помощью команды ниже в папке будет создан .env-файл
+
+```
+echo 'SECRET_KEY=super-secret
+ALLOWED_HOSTS=*
+DEBUG=0
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+' > .env
+```
+
+#### Сборка контейенеров
+
+Соберите контейнеры и запустите их
+
+```
+docker compose up -d
+docker compose exec backend python manage.py createsuperuser
+```
+
+### Заполнение базы данных
+
+Заполните БД подготовленными данными при первом запуске
+
+```
+docker compose cp ../data/ingredients.json backend:/app/ingredients.json 
+docker compose exec backend python manage.py importingredients ingredients.json
+docker compose exec backend rm ingredients.json
+```
+
+
+## Об авторе
+
+Калинин Степан
