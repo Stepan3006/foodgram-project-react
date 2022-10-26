@@ -11,7 +11,7 @@
 Сперва клонируйте репозиторий на локальную машину и создайте venv
 
 ```
-git clone git@github.com:cianoid/foodgram-project-react.git
+git clone git@github.com:Stepan3006/foodgram-project-react.git
 cd foodgram-project-react
 python -m venv venv
 source venv/bin/activate
