@@ -47,9 +47,9 @@ docker compose exec backend python manage.py createsuperuser
 Заполните БД подготовленными данными при первом запуске
 
 ```
-docker compose cp ../data/ingredients.json backend:/app/ingredients.json 
-docker compose exec backend python manage.py importingredients ingredients.json
-docker compose exec backend rm ingredients.json
+sudo docker-compose exec backend python manage.py importingredients --path 'recipes/data/ingredients.json'
+sudo docker-compose exec backend python manage.py importingredients --path 'recipes/data/tags.json'
+
 ```
 
 
