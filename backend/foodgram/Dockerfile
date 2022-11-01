@@ -4,4 +4,4 @@ COPY requirements.txt .
 RUN apt update && apt install -y libpq-dev gcc
 RUN pip install -r requirements.txt --no-cache-dir
 COPY . .
-CMD ["bash", "./script.sh"]
+CMD ["bash", "./entrypoint.sh"]
