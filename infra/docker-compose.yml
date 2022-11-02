@@ -9,13 +9,13 @@ services:
       - ./.env
 
   frontend:
-    image: stepan3006/foodgram-frontend:latest
+    image: cianoid/foodgram-frontend:latest
     volumes:
       - frontend_value:/app/result_build/build/
 
   backend:
-    image: stepan3006/foodgram-backend:latest
-    domainname: foodgram.Stepan3006.org
+    image: cianoid/foodgram-backend:latest
+    domainname: foodgram.cianoid.org
     restart: always
     volumes:
       - static_backend_value:/app/static/
