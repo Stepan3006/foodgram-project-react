@@ -15,7 +15,6 @@ services:
 
   backend:
     image: stepan3006/foodgram-backend:latest
-    domainname: foodgram.cianoid.org
     restart: always
     volumes:
       - static_backend_value:/app/static/
