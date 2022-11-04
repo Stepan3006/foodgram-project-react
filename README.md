@@ -85,6 +85,16 @@ sudo docker-compose exec backend python manage.py importingredients --path 'reci
 
 http://158.160.17.0/
 
+### Панель администратора
+
+http://158.160.17.0/admin/
+
+username: admin
+password: admin
+
+### Документация и схема проекта
+http://158.160.17.0/api/docs/
+
 ## Об авторе
 
 Калинин Степан
