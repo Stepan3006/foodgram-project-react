@@ -6,11 +6,13 @@
 Python Django Django REST Framework PostgreSQL Nginx gunicorn docker GitHub%20Actions Yandex.Cloud
 
 #### Установка на удаленный сервер Docker
-# Установка утилиты для скачивания файлов
+Установка утилиты для скачивания файлов
 sudo apt install curl
-# Эта команда скачает скрипт для установки докера
+ 
+Эта команда скачает скрипт для установки докера
 curl -fsSL https://get.docker.com -o get-docker.sh
-# Эта команда запустит его
+
+Эта команда запустит его
 sh get-docker.sh  
 
 #### Установка на удаленный сервер Docker Compose 
@@ -62,7 +64,9 @@ sudo docker-compose exec backend python manage.py importingredients --path 'reci
 sudo docker-compose exec backend python manage.py importingredients --path 'recipes/data/tags.json'
 
 ```
+### Работающий проект 
 
+http://158.160.17.0/
 
 ## Об авторе
 
