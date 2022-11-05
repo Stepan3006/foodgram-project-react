@@ -15,7 +15,7 @@ from api.serializers import (IngredientSerializer,
                              RecipeCreateUpdateSerializer,
                              RecipeSerializerList, RecipeShortSerilizer,
                              SubscriptionListSerializer, TagSerializer)
-from api import pdf
+from . import pdf
 from recipes.models import (Favorite, Ingredient, IngredientRecipeRelation,
                             Recipe, ShoppingCart, Subscription, Tag)
 

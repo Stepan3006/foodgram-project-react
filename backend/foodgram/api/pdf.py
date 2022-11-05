@@ -17,7 +17,7 @@ class PDFMaker(FPDF):
     font_regular_family = 'DejaVu'
     font_bold_family = 'DejaVuBold'
     font_bold_name = 'DejaVuSansCondensed-Bold.ttf'
-    font_dir = 'static/fonts/'
+    font_dir = 'data/fonts/'
     default_font_size = 12
     font_sizes = {
         Constant.DT_CAPTION: 14,
